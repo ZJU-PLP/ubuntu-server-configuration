@@ -86,4 +86,52 @@ OpenCV
 Python
 Vim
 ```
+### 安装Google-Chrome
+```
+sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+```
+* 如果安装完成后，加载不了插件，需要安装其他版本的Google-Chrome，例如非稳定版
+### 安装Eigen3.3.7
+* 下载<http://eigen.tuxfamily.org/index.php?title=Main_Page>
+```
+cd Eiigen-3.3.4
+mkdir build
+cd build
+cmake ..
+sudo make install
+```
+### 安装Ceres-1.14
+* 安装准备
+```
+sudo apt-get install cmake
+sudo apt-get install libgoogle-glog-dev
+sudo apt-get install libatlas-base-dev
+sudo apt-get install libsuitesparse-dev
+```
+* 开始安装：**安装前Eigen必须已安装好**
+```
+git clone https://ceres-solver.googlesource.com/ceres-solver
+cd Ceres-1.13
+mkdir build
+cd buid
+cmake ..
+make -j3
+make test
+make install
+```
+### 安装OpenCV4.0.1
+* 下载<https://opencv.org/opencv-4-1-0.html>
+```
+cd ~/opencv
+mkdir build
+cd build
+sudo apt install cmake
+sudo cmake -D CMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+make -j16
+sudo make install
+```
+* 如遇文件因网络原因下载不了，可以使用手机开启热点进行下载
 
