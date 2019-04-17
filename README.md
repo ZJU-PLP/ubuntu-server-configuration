@@ -4,7 +4,7 @@ common software setup and remote control software setup
 ```
 ## common software setup
 ```
-install ubuntu 16.04 LTS.
+Install ubuntu 16.04 LTS.
 username:robot 
 password:binHai_robotCenter123,
 change su passwd:new passwd is TAB key
