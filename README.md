@@ -313,11 +313,54 @@ sudo tar -C /opt -xzf pylonSDK*.tar.gz
 ### 安装libfreenect2(kinectv2驱动)
 * 链接<https://github.com/OpenKinect/libfreenect2>
 * 注意事项
-> 不要装Install VAAPI (optional, **Intel only**)
-  不要装Install OpenCL (optional)
+>> 不要装Install VAAPI (optional, **Intel only**)
+   不要装Install OpenCL (optional)
 ### 安装Shadowsocks-Qt5
 * 链接<https://github.com/shadowsocks/shadowsocks-qt5/releases>
 ```
 chmod +x Shadowsocks-Qt5
 ```
 * 可用ss账号<https://gitlab.com/Alvin9999/free/wikis/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7>
+
+## remote control software
+### 安装x2go
+* 教程链接<https://www.linuxidc.com/Linux/2015-06/119337.htm>
+```
+sudo add-apt-repository ppa:x2go/stable
+sudo apt-get update
+sudo apt-get updatesudo apt-get install x2goserver x2goserver-xsession
+sudo apt-get install x2goclient
+sudo apt-get xfce4
+reboot
+```
+* 注意事项
+```
+error:The remote proxy closed the connection while negotiating the session. This may be due to the wrong authentication credentials passed to the server.
+客户端：sudo x2goclient
+```
+### 安装teamviewer14
+* 链接<https://www.teamviewer.com/en/download/linux/>
+```
+sudo dpkg -i teamviewer_14.2.2558_amd64.deb
+sudo apt-get install -f install(if error)
+sudo dpkg -i teamviewer_14.2.2558_amd64.deb
+```
+### 个人文件夹链接到数据盘
+```
+#!/bin/bash
+for user in $(ls /home); do
+  if [ ! -d "/mnt/data/${user}" ]; then
+    sudo mkdir /mnt/data/${user}
+    sudo chown $user:$user /mnt/data/${user}
+    sudo ln -s /mnt/data/${user} /home/${user}/Data
+    sudo chown -h $user:$user /home/${user}/Data
+  fi
+done
+```
+* 效果
+![home/]
+### 服务器用户配置
+```
+新增用户：sudo adduser newUser
+删除用户： sudo deluser newUser
+修改用户root权限：sudo gedit /etc/sudoers，在# User privilege specification下方添加newUser ALL=(ALL:ALL) ALL
