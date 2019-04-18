@@ -288,6 +288,10 @@ sudo make install
 (optional)安装OpenNI、OpenNI2：如果需要PCLVisualizer
 sudo apt-get install libopenni-dev 
 sudo apt-get install libopenni2-dev
+
+Fix ROS Kinetic：
+sudo apt-get update 
+sudo apt-get install ros-kinetic-desktop-full
 ```
 ### 安装Anaconda(python3.6)
 * 链接<https://www.anaconda.com/distribution/#macos>
@@ -306,4 +310,8 @@ sudo tar -C /opt -xzf pylonSDK*.tar.gz
 ```
 ### 安装Matlab2018
 * 链接<https://blog.csdn.net/zzc15806/article/details/82313072>
-
+### 安装libfreenect2(kinectv2驱动)
+* 链接<https://github.com/OpenKinect/libfreenect2>
+* 注意事项
+> 不要Install VAAPI (optional, **Intel only**)
+> 不要Install OpenCL (optional)
