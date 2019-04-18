@@ -193,7 +193,7 @@ pip install --upgrade pip
 sudo pip install numpy
 pip install numpy
 ```
-###安装PyTorch Stable(1.0)
+### 安装PyTorch Stable(1.0)
 * 链接<https://pytorch.org/>
 ```
 sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple torch torchvision
@@ -205,7 +205,7 @@ import torch
 torch.cuda.is_available()
 return true
 ```
-###安装Tensorflow-gpu==1.11.0
+### 安装Tensorflow-gpu==1.11.0
 ```
 sudo -H pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.11.0
 ```
@@ -216,7 +216,7 @@ import tensorflow as tf
 hello =  hello = tf.constant('Hello, Tensorflow!')
 sess = tf.Session（）
 ```
-###安装Caffe-gpu
+### 安装Caffe-gpu
 * 安装依赖
 ```
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
@@ -288,6 +288,21 @@ sudo make install
 (optional)安装OpenNI、OpenNI2：如果需要PCLVisualizer
 sudo apt-get install libopenni-dev 
 sudo apt-get install libopenni2-dev
+```
+### 安装Anaconda(python3.6)
+* 链接<https://www.anaconda.com/distribution/#macos>
+```
+sudo bash Anaconda3-5.2.0-Linux-x86_64.sh
+全部Enter
+sudo gedit ~/.zshrc
+export PATH="/home/xx/anaconda3/bin:$PATH"
+source ~/.zshrc
+```
+### 安装Pylon
+* 链接<https://www.baslerweb.com/cn/sales-support/downloads/software-downloads/pylon-5-2-0-linux-x86-64-bit/>
+```
+cd pylon-5.0.11*
+sudo tar -C /opt -xzf pylonSDK*.tar.gz
 ```
 ### 安装Matlab2018
 * 链接<https://blog.csdn.net/zzc15806/article/details/82313072>
