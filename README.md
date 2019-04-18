@@ -313,5 +313,11 @@ sudo tar -C /opt -xzf pylonSDK*.tar.gz
 ### 安装libfreenect2(kinectv2驱动)
 * 链接<https://github.com/OpenKinect/libfreenect2>
 * 注意事项
-> 不要Install VAAPI (optional, **Intel only**)
-> 不要Install OpenCL (optional)
+> 不要装Install VAAPI (optional, **Intel only**)
+  不要装Install OpenCL (optional)
+### 安装Shadowsocks-Qt5
+* 链接<https://github.com/shadowsocks/shadowsocks-qt5/releases>
+```
+chmod +x Shadowsocks-Qt5
+```
+* 可用ss账号<https://gitlab.com/Alvin9999/free/wikis/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7>
