@@ -339,7 +339,8 @@ reboot
 ```
 error:The remote proxy closed the connection while negotiating the session. This may be due to the wrong authentication credentials passed to the server.
 客户端：sudo x2goclient
-新进x2go界面时，选择默认配置
+新进x2go界面时，选择use default config
+如果显示terminal不能使用,进入Setting -> Seeting Manager -> Preferred Applications -> Unities -> Terminal Emulator -> Xfce Terminal
 ```
 
 ### 安装teamviewer14
