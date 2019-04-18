@@ -34,23 +34,6 @@ sudo apt-get -f install(when errors)
 搜索出fcitx配置，将sogou输入法设为默认即可
 sudo apt-get remove fcitx-ui-qimpanel(if errors)
 ```
-### 安装nvidia显卡驱动
-* 驱动下载<https://www.nvidia.cn/Download/index.aspx?lang=cn>
-```
-sudo vim /etc/modprobe.d/blacklist.conf
-blacklist nouveau
-文件最后加入
- options nouveau modeset=0
- sudo update-initramfs -u
-lsmod | grep nouveau(if no output,is ok)
-reboot
-ubuntu下按ctrl+alt+f1进入命令行界面（不同型号电脑有区别）
-sudo service lightdm stop 
-sudo apt-get remove nvidia-*
-sudo chmod  a+x NVIDIA-Linux-x86_64-396.18.run
-sudo ./NVIDIA-Linux-x86_64-396.18.run -no-x-check -no-nouveau-check -no-opengl-files
-nvidia-smi（检测是否成功）
-```
 ### 安装zsh
 ```
 sudo apt-get install git
@@ -148,6 +131,23 @@ make -j16
 sudo make install
 ```
 * 如遇文件因网络原因下载不了，可以使用手机开启热点进行下载
+### 安装nvidia显卡驱动
+* 驱动下载<https://www.nvidia.cn/Download/index.aspx?lang=cn>
+```
+sudo vim /etc/modprobe.d/blacklist.conf
+blacklist nouveau
+文件最后加入
+ options nouveau modeset=0
+ sudo update-initramfs -u
+lsmod | grep nouveau(if no output,is ok)
+reboot
+ubuntu下按ctrl+alt+f1进入命令行界面（不同型号电脑有区别）
+sudo service lightdm stop 
+sudo apt-get remove nvidia-*
+sudo chmod  a+x NVIDIA-Linux-x86_64-396.18.run
+sudo ./NVIDIA-Linux-x86_64-396.18.run -no-x-check -no-nouveau-check -no-opengl-files
+nvidia-smi（检测是否成功）
+```
 ### 安装cuda9.0,cuDNN7.0.5
 * cuda下载<https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal>
 ```
