@@ -2,6 +2,7 @@
 ```
 common software setup and remote control software setup
 ```
+****
 ## common software setup
 ```
 Install ubuntu 16.04 LTS.
