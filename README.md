@@ -123,6 +123,18 @@ make -j3
 make test
 make install
 ```
+### 安装ros-kinetic
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-get update
+sudo apt-get install ros-kinetic-desktop-full
+
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/kinetic/setup.zsh" >> ~/.zshrc
+source ~/.zshrc
+```
 ### 安装OpenCV4.0.1
 * 下载<https://opencv.org/opencv-4-1-0.html>
 ```
@@ -174,3 +186,72 @@ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 ```
+###安装Numpy
+```
+sudo apt-get install python-pip
+pip install --upgrade pip
+sudo pip install numpy
+pip install numpy
+```
+###安装PyTorch Stable(1.0)
+* 链接<https://pytorch.org/>
+```
+sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple torch torchvision
+```
+* 安装测试
+```
+python3
+import torch
+torch.cuda.is_available()
+return true
+```
+###安装Tensorflow-gpu==1.11.0
+```
+sudo -H pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.11.0
+```
+* 安装测试
+```
+python3
+import tensorflow as tf
+hello =  hello = tf.constant('Hello, Tensorflow!')
+sess = tf.Session（）
+```
+###安装Caffe-gpu
+* 安装依赖
+```
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install --no-install-recommends libboost-all-dev
+sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+```
+* 环境配置
+```
+git clone https://github.com/BVLC/caffe.git
+cd <path-to-caffe>/caffe
+sudo cp Makefile.config.example Makefile.config
+sudo gedit Makefile.config （打开Makefile.config文件）
+# USE_CUDNN := 1
+# OPENCV_VERSION := 3（将3改为4）
+# WITH_PYTHON_LAYER := 1
+# PYTHON_INCLUDE += $(dir $(shell python -c ‘import numpy.core; print(numpy.core.__file__)‘))/include（如果numpy安装的路径和文件中默认的不同）
+因为安装的是 CUDA 9.0，需要注释下面两行
+CUDA_ARCH := # -gencode arch=compute_20,code=sm_20 \
+# -gencode arch=compute_20,code=sm_21 \
+sudo gedit CMakeLists.txt
+添加SET( CMAKE_CXX_FLAGS "-std=c++11 -O3")
+make all -j8
+make test -j8
+make runtest -j8
+```
+* 安装测试
+```
+cd caffe
+./data/mnist/get_mnist.sh
+./examples/mnist/create_mnist.sh
+./examples/mnist/train_lenet.sh
+```
+* 注意事项
+Fix build with OpenCV 4.0<https://github.com/BVLC/caffe/pull/6625/commits/7f503bd9a19758a173064e299ab9d4cac65ed60f>
+> /usr/local/include/opencv4/opencv2/core/cvdef.h:656:4: error: #error "OpenCV 4.x+ requires enabled C++11 support"
+###安装Matlab2018
+* 链接<https://blog.csdn.net/zzc15806/article/details/82313072>
