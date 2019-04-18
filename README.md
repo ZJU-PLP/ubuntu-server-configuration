@@ -1,6 +1,6 @@
 # ubuntu-server-configuration
 ```
-common software setup and remote control software setup
+common software setup and remote control software configuration
 ```
 ****
 ## common software setup
@@ -324,7 +324,7 @@ chmod +x Shadowsocks-Qt5
 * 可用ss账号<https://gitlab.com/Alvin9999/free/wikis/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7>
 ****
 ****
-## remote control software
+## remote control configuration
 ### 安装x2go
 * 教程链接<https://www.linuxidc.com/Linux/2015-06/119337.htm>
 ```
