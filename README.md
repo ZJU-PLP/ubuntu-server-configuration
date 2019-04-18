@@ -41,6 +41,7 @@ blacklist nouveau
 文件最后加入
  options nouveau modeset=0
  sudo update-initramfs -u
+lsmod | grep nouveau(if no output,is ok)
 reboot
 ubuntu下按ctrl+alt+f1进入命令行界面（不同型号电脑有区别）
 sudo service lightdm stop 
@@ -134,4 +135,32 @@ make -j16
 sudo make install
 ```
 * 如遇文件因网络原因下载不了，可以使用手机开启热点进行下载
+### 安装cuda9.0,cuDNN7.0.5
+* cuda下载<https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal>
+* cuDNN下载<https://developer.nvidia.com/cudnn>
+```
+sudo chmod +x cuda_9.1.85_387.26_linux.run 
+sudo ./cuda_9.1.85_387.26_linux.run 
+accept/decline/quit: accept
+
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 387.26?
+(y)es/(n)o/(q)uit: n
+
+Install the CUDA 9.0 Toolkit?
+(y)es/(n)o/(q)uit: y
+
+Do you want to install a symbolic link at /usr/local/cuda?
+(y)es/(n)o/(q)uit: y
+
+Install the CUDA 9.0 Samples?
+(y)es/(n)o/(q)uit: y
+```
+* 环境配置
+```
+sudo gedit ~/.zshrc
+export PATH=/usr/local/cuda-9.1/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
+source ~/.zshrc
+nvcc -V
+* ![avatar](/home/plp/Pictures/cuda.png)
 
