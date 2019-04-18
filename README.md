@@ -187,7 +187,7 @@ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 ```
-###安装Numpy
+### 安装Numpy
 ```
 sudo apt-get install python-pip
 pip install --upgrade pip
@@ -376,4 +376,5 @@ done
 目前新用户的密码默认为：1，无root权限，如需更改，请联系网管 > 
 请勿随意删除公共盘里面资料，如需安装其他软件，建议使用anaconda在个人用户下安装，如需网管安装，请告知
 目前服务器IP：10.10.30.161
+个人使用GPU显卡时候，请在代码中指定所用显卡的名称（如：os.environ["CUDA_VISIBLE_DEVICES"] = "1"），禁止不进行设置而占用全部四块显卡，如需使用全部显卡资源，请告知
 ```
