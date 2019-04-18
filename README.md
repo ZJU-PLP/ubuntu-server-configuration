@@ -251,7 +251,44 @@ cd caffe
 ./examples/mnist/train_lenet.sh
 ```
 * 注意事项
+```
+/usr/local/include/opencv4/opencv2/core/cvdef.h:656:4: error: #error "OpenCV 4.x+ requires enabled C++11 support"
 Fix build with OpenCV 4.0<https://github.com/BVLC/caffe/pull/6625/commits/7f503bd9a19758a173064e299ab9d4cac65ed60f>
-> /usr/local/include/opencv4/opencv2/core/cvdef.h:656:4: error: #error "OpenCV 4.x+ requires enabled C++11 support"
-###安装Matlab2018
+```
+* 备注说明
+```
+目前只安装好python2.7版本的caffe-gpu,python3.6版本的未编译通过
+```
+### 安装PCL-1.9.1-GPU
+* 安装依赖
+```
+sudo apt-get update  
+sudo apt-get install git build-essential linux-libc-dev  
+sudo apt-get install cmake cmake-gui   
+sudo apt-get install libusb-1.0-0-dev libusb-dev libudev-dev  
+sudo apt-get install mpi-default-dev openmpi-bin openmpi-common    
+sudo apt-get install libflann1.8 libflann-dev  
+（sudo apt-get install libeigen3-dev  ，**不需要，已安装**）
+sudo apt-get install libboost-all-dev  
+sudo apt-get install libvtk6.2
+sudo apt-get install libvtk6-dev libvtk6-qt-dev
+sudo apt-get install libqhull7 libqhull-dev libqhull-doc  libgtest-dev
+sudo apt-get install freeglut3-dev pkg-config  
+sudo apt-get install libxmu-dev libxi-dev libproj9 libproj-dev
+sudo apt-get install mono-complete  libopenni-dev
+sudo apt-get install qt-sdk openjdk-8-jdk openjdk-8-jre 
+```
+* 安装配置
+```
+cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr \
+     -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON \
+     -DCMAKE_INSTALL_PREFIX=/usr ..
+make -j16
+sudo make install
+(optional)安装OpenNI、OpenNI2：如果需要PCLVisualizer
+sudo apt-get install libopenni-dev 
+sudo apt-get install libopenni2-dev
+```
+### 安装Matlab2018
 * 链接<https://blog.csdn.net/zzc15806/article/details/82313072>
+
