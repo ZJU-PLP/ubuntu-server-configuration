@@ -361,7 +361,7 @@ for user in $(ls /home); do
 done
 ```
 * 效果
-> ![image](https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/Selection_028.png)
+> ![image](https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/Selection_030.png)
 > ![iamge](https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/Selection_029.png)
 ### 服务器用户配置
 ```
