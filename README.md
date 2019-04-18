@@ -82,7 +82,7 @@ sudo apt-get install google-chrome-stable
 ### 安装Eigen3.3.7
 * 下载<http://eigen.tuxfamily.org/index.php?title=Main_Page>
 ```
-cd Eiigen-3.3.4
+cd Eiigen-3.3.7
 mkdir build
 cd build
 cmake ..
@@ -99,7 +99,7 @@ sudo apt-get install libsuitesparse-dev
 * 开始安装：**安装前Eigen必须已安装好**
 ```
 git clone https://ceres-solver.googlesource.com/ceres-solver
-cd Ceres-1.13
+cd Ceres-1.14
 mkdir build
 cd buid
 cmake ..
@@ -314,8 +314,10 @@ sudo tar -C /opt -xzf pylonSDK*.tar.gz
 ### 安装libfreenect2(kinectv2驱动)
 * 链接<https://github.com/OpenKinect/libfreenect2>
 * 注意事项
->> 不要装Install VAAPI (optional, **Intel only**)
-   不要装Install OpenCL (optional)
+```
+不要装Install VAAPI (optional, **Intel only**)
+不要装Install OpenCL (optional)
+```
 ### 安装Shadowsocks-Qt5
 * 链接<https://github.com/shadowsocks/shadowsocks-qt5/releases>
 ```
