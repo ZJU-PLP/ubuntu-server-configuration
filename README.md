@@ -151,8 +151,8 @@ nvidia-smi（检测是否成功）
 ### 安装cuda9.0,cuDNN7.0.5
 * cuda下载<https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal>
 ```
-sudo chmod +x cuda_9.1.85_387.26_linux.run 
-sudo ./cuda_9.1.85_387.26_linux.run 
+sudo chmod +x cuda_9.0.176.1_linux.run 
+sudo ./cuda_9.0.176.1_linux.run 
 accept/decline/quit: accept
 
 Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 387.26?
