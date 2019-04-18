@@ -137,7 +137,6 @@ sudo make install
 * 如遇文件因网络原因下载不了，可以使用手机开启热点进行下载
 ### 安装cuda9.0,cuDNN7.0.5
 * cuda下载<https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal>
-* cuDNN下载<https://developer.nvidia.com/cudnn>
 ```
 sudo chmod +x cuda_9.1.85_387.26_linux.run 
 sudo ./cuda_9.1.85_387.26_linux.run 
@@ -162,5 +161,16 @@ export PATH=/usr/local/cuda-9.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
 source ~/.zshrc
 nvcc -V
-!(https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/cuda.png?raw=true)
-
+!(https://raw.githubusercontent.com/ZJU-PLP/ubuntu-server-configuration/master/cuda.png)
+cd /usr/local/cuda-9.1/samples/1_Utilities/deviceQuery
+sudo make
+./deviceQuery
+结果中有显示Result = Pass,则安装通过
+```
+* cuDNN下载<https://developer.nvidia.com/cudnn>
+```
+tar -xzvf cudnn-9.0-linux-x64-v7.tgz
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+```
