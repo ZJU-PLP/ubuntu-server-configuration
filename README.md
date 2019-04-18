@@ -6,7 +6,7 @@ common software setup and remote control software setup
 ```
 Install ubuntu 16.04 LTS.
 username:robot 
-password:binHai_robotCenter123,
+password:保密
 change su passwd:new passwd is TAB key
 设置软件服务源为default 
 sudo apt-get update 
@@ -173,7 +173,7 @@ export PATH=/usr/local/cuda-9.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
 source ~/.zshrc
 nvcc -V
-!(https://raw.githubusercontent.com/ZJU-PLP/ubuntu-server-configuration/master/cuda.png)
+显示有Cuda compilation tools, release 9.0, V9.0.176，表示通过
 cd /usr/local/cuda-9.1/samples/1_Utilities/deviceQuery
 sudo make
 ./deviceQuery
@@ -338,7 +338,9 @@ reboot
 ```
 error:The remote proxy closed the connection while negotiating the session. This may be due to the wrong authentication credentials passed to the server.
 客户端：sudo x2goclient
+新进x2go界面时，选择默认配置
 ```
+
 ### 安装teamviewer14
 * 链接<https://www.teamviewer.com/en/download/linux/>
 ```
@@ -359,9 +361,14 @@ for user in $(ls /home); do
 done
 ```
 * 效果
-![home/]
+> ![image](https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/Selection_028.png)
+> ![iamge](https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/Selection_029.png)
 ### 服务器用户配置
 ```
 新增用户：sudo adduser newUser
 删除用户： sudo deluser newUser
 修改用户root权限：sudo gedit /etc/sudoers，在# User privilege specification下方添加newUser ALL=(ALL:ALL) ALL
+```
+* 注意事项
+> 目前新用户的密码默认为：1，无root权限，如需更改，请联系网管
+> **请勿随意删除公共盘里面资料**，如需安装其他软件，建议使用anaconda在个人用户下安装，如需网管安装，请告知
