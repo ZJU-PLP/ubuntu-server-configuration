@@ -162,5 +162,5 @@ export PATH=/usr/local/cuda-9.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
 source ~/.zshrc
 nvcc -V
-!(https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/cuda.png)
+!(https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/cuda.png?raw=true)
 
