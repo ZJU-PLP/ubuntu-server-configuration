@@ -294,6 +294,16 @@ Fix ROS Kinetic：
 sudo apt-get update 
 sudo apt-get install ros-kinetic-desktop-full
 ```
+* 注意事项
+```
+如果安装PCL-1.9.1-CPU版本
+安装配置为：
+mkdir build
+cd build
+cmake..
+make -j16
+sudo make install
+
 ### 安装Anaconda(python3.6)
 * 链接<https://www.anaconda.com/distribution/#macos>
 ```
