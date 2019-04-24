@@ -303,10 +303,10 @@ cd build
 cmake..
 make -j16
 sudo make install
+```
 
 ### 安装Anaconda(python3.6)
 * 链接<https://www.anaconda.com/distribution/#macos>
-```
 sudo bash Anaconda3-5.2.0-Linux-x86_64.sh
 全部Enter
 sudo gedit ~/.zshrc
