@@ -391,5 +391,5 @@ done
 目前服务器IP：10.10.30.161，新用户只需装好x2goclient即可正常使用（ubuntu,windows,mac平台均可使用），也可使用ssh
 个人使用GPU显卡时候，请在代码中指定所用显卡的名称（如：os.environ["CUDA_VISIBLE_DEVICES"] = "1"），禁止不进行设置而占用全部四块显卡，如需使用全部显卡资源，请告知
 大家尽量把数据放在/mnt/hardDisk_00/的个人文件夹下面。
-数据盘情况：/mnt/hardDisk_00/硬盘容量为4T，/mnt/hardDisk_00/容量为4T，共计8T
+数据盘情况：/mnt/hardDisk_00/硬盘容量为4T，/mnt/hardDisk_01/容量为4T，共计8T
 ```
