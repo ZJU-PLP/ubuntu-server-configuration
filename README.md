@@ -206,6 +206,10 @@ import torch
 torch.cuda.is_available()
 return true
 ```
+* 注意事项
+```
+如果sudo pip3 install用不了，按解决方案https://blog.csdn.net/gzh8579/article/details/79530144
+```
 ### 安装Tensorflow-gpu==1.11.0
 ```
 sudo -H pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.11.0
