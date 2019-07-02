@@ -349,7 +349,6 @@ sudo add-apt-repository ppa:x2go/stable
 sudo apt-get update
 sudo apt-get updatesudo apt-get install x2goserver x2goserver-xsession
 sudo apt-get install x2goclient
-sudo apt-get xfce4
 reboot
 ```
 * 注意事项
