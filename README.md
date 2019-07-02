@@ -347,7 +347,7 @@ chmod +x Shadowsocks-Qt5
 ```
 sudo add-apt-repository ppa:x2go/stable
 sudo apt-get update
-sudo apt-get updatesudo apt-get install x2goserver x2goserver-xsession
+sudo apt-get install x2goserver x2goserver-xsession
 sudo apt-get install x2goclient
 reboot
 ```
