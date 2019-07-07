@@ -333,6 +333,17 @@ sudo tar -C /opt -xzf pylonSDK*.tar.gz
 不要装Install VAAPI (optional, Intel only)
 不要装Install OpenCL (optional)
 ```
+### 安装VScode1.39
+* 链接<https://code.visualstudio.com/docs/?dv=linux64_deb>
+
+### 安装Clion2018.2
+* 链接<http://www.jetbrains.com/clion/>
+* 破解<https://blog.csdn.net/omnispace/article/details/79157639>
+
+### 安装Pycharm Professional
+* 链接<http://www.jetbrains.com/pycharm/?fromMenu>
+* 破解<https://blog.csdn.net/omnispace/article/details/79157639>
+
 ### 安装Shadowsocks-Qt5
 * 链接<https://github.com/shadowsocks/shadowsocks-qt5/releases>
 ```
