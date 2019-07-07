@@ -349,8 +349,9 @@ sudo tar -C /opt -xzf pylonSDK*.tar.gz
 ```
 chmod +x Shadowsocks-Qt5
 ```
-* 可用ss账号<https://gitlab.com/Alvin9999/free/wikis/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7>
-<https://www.youneed.win/free-ss>
+* 可用ss账号
+<https://gitlab.com/Alvin9999/free/wikis/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7>(常用)
+<https://www.youneed.win/free-ss>（备用）
 * 备注
 ```
 使用科学上网后，搜索SS账号，即可以看到相关免费SS节点，Youtube上可以看到一些配置方法
