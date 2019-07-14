@@ -132,6 +132,11 @@ make -j16
 sudo make install
 ```
 * 如遇文件因网络原因下载不了，可以使用手机开启热点进行下载
+### 安装labelme
+```
+sudo apt-get install python-pyqt5
+sudo pip3 install labelme
+```
 ### 安装nvidia显卡驱动
 * 驱动下载<https://www.nvidia.cn/Download/index.aspx?lang=cn>
 ```
