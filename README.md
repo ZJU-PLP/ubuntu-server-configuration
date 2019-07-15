@@ -227,6 +227,16 @@ import tensorflow as tf
 hello =  hello = tf.constant('Hello, Tensorflow!')
 sess = tf.Session（）
 ```
+### 安装keras==2.2.4
+```
+pip3 install keras==2.2.4
+```
+* 安装测试
+```
+python3
+import keras
+print(keras.__version__)
+```
 ### 安装Caffe-gpu
 * 安装依赖
 ```
@@ -364,7 +374,7 @@ sudo tar -C /opt -xzf pylonSDK*.tar.gz
 ****
 ## remote control configuration
 ### 安装x2go
-* 教程链接<https://www.linuxidc.com/Linux/2015-06/119337.htm>
+* ubuntu16.04教程链接<https://www.linuxidc.com/Linux/2015-06/119337.htm>
 ```
 sudo add-apt-repository ppa:x2go/stable
 sudo apt-get update
@@ -372,6 +382,7 @@ sudo apt-get install x2goserver x2goserver-xsession
 sudo apt-get install x2goclient
 reboot
 ```
+* windows下载链接<https://code.x2go.org/releases/binary-win32/x2goclient/releases/4.1.2.0-2018.06.22/>
 * 注意事项
 ```
 error:The remote proxy closed the connection while negotiating the session. This may be due to the wrong authentication credentials passed to the server.
