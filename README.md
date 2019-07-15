@@ -227,9 +227,9 @@ import tensorflow as tf
 hello =  hello = tf.constant('Hello, Tensorflow!')
 sess = tf.Session（）
 ```
-### 安装keras==2.2.4
+### 安装keras==2.0.9
 ```
-pip3 install keras==2.2.4
+pip3 install keras==2.0.9
 ```
 * 安装测试
 ```
