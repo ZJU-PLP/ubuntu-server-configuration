@@ -78,7 +78,7 @@ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key a
 sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
-* 如果安装完成后，加载不了插件，需要安装其他版本的Google-Chrome，例如非稳定版
+* 如果安装完成后，加载不了插件，参考解决方案https://blog.csdn.net/ywd1992/article/details/89703894
 ### 安装Eigen3.3.7
 * 下载<http://eigen.tuxfamily.org/index.php?title=Main_Page>
 ```
