@@ -382,6 +382,10 @@ sudo apt-get install x2goserver x2goserver-xsession
 sudo apt-get install x2goclient
 reboot
 ```
+*注意事项
+```
+进行登陆时，需要选择XFCE界面（Session type）
+```
 * windows下载链接<https://code.x2go.org/releases/binary-win32/x2goclient/releases/4.1.2.0-2018.06.22/>
 * 注意事项
 ```
