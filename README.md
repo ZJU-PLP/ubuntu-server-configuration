@@ -398,7 +398,7 @@ sudo dpkg -i teamviewer_14.2.2558_amd64.deb
 sudo apt-get install -f install(if error)
 sudo dpkg -i teamviewer_14.2.2558_amd64.deb
 ```
-### 个人文件夹链接到数据盘
+### 个人文件夹链接到数据盘（申请账号时候已经建好，个人不必再设置）
 ```
 #!/bin/bash
 for user in $(ls /home); do
