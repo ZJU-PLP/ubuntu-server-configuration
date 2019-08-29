@@ -382,10 +382,6 @@ sudo apt-get install x2goserver x2goserver-xsession
 sudo apt-get install x2goclient
 reboot
 ```
-* 注意事项
-```
-进行登陆时，需要选择XFCE界面（Session type）
-```
 * windows下载链接<https://code.x2go.org/releases/binary-win32/x2goclient/releases/4.1.2.0-2018.06.22/>
 * 登陆界面
 > ![image](https://github.com/ZJU-PLP/ubuntu-server-configuration/blob/master/login.jpg)
@@ -395,6 +391,7 @@ error:The remote proxy closed the connection while negotiating the session. This
 客户端：sudo x2goclient
 新进x2go界面时，选择use default config
 如果显示terminal不能使用,进入Setting -> Seeting Manager -> Preferred Applications -> Unities -> Terminal Emulator -> Xfce Terminal
+进行登陆时，需要选择XFCE界面（Session type）
 ```
 
 ### 安装teamviewer14
